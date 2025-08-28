@@ -8,24 +8,24 @@ import util.Calculator;
 public class Programa {
 
 	public static void main(String[] args) {
-		
+
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
+
 		double raio;
 		double circuferencia;
 		double volume;
-		
+
 		System.out.print("Entre com o raio: ");
 		raio = sc.nextDouble();
-		
+
 		circuferencia = Calculator.circuferencia(raio);
 		volume = Calculator.circuferencia(raio);
-		
-		System.out.printf("Circuferência: %.2f%n" , circuferencia);
-		System.out.printf("Volume: %.2f%n" , volume);
-		System.out.printf("Valor do PI: %.2f%n" , Calculator.PI);
-		
+
+		System.out.printf("CircuferÃªncia: %.2f%n", circuferencia);
+		System.out.printf("Volume: %.2f%n", volume);
+		System.out.printf("Valor do PI: %.2f%n", Calculator.PI);
+
 	}
 
 }

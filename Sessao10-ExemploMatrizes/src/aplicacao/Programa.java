@@ -38,6 +38,6 @@ public class Programa {
 		}
 
 		System.out.println("Numeros negativos = " + conta);
-		
+
 	}
 }

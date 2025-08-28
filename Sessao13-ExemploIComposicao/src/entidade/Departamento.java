@@ -1,11 +1,11 @@
 package entidade;
 
 public class Departamento {
-	
+
 	private String name;
-	
+
 	public Departamento() {
-		
+
 	}
 
 	public Departamento(String name) {

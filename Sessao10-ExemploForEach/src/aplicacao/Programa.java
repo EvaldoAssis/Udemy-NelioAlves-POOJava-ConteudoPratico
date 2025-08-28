@@ -11,10 +11,10 @@ public class Programa {
 		}
 
 		System.out.println();
-		System.out.println("Ao invÈs de imprimir os valores do vetor com o for da maneira acima, podemos \n"
-				+ "usar o laÁo for each, que ir· percorrer todos os elementos do vetor declarado, \n"
-				+ "chamando todos por um apelido. No caso abaixo, o apelido È obj. Ou seja, \n"
-				+ "imprimir obj no laÁo abaixo, ter· o mesmo efeito que imprimir vect[i]");
+		System.out.println("Ao inv√©s de imprimir os valores do vetor com o for da maneira acima, podemos \n"
+				+ "usar o la√ßo for each, que ir√° percorrer todos os elementos do vetor declarado, \n"
+				+ "chamando todos por um apelido. No caso abaixo, o apelido √© obj. Ou seja, \n"
+				+ "imprimir obj no la√ßo abaixo, ter√° o mesmo efeito que imprimir vect[i]");
 		System.out.println();
 
 		for (String obj : vect) {

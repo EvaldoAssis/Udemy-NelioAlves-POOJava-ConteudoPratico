@@ -7,23 +7,24 @@ import java.util.List;
 import entidade.enums.NivelFuncionario;
 
 public class Funcionario {
-	
+
 	private String name;
 	private NivelFuncionario nivelFuncionario;
 	private Double baseSalarial;
 
-	//AssociaÁ„o: 1:1 (1 funcionario tem 1 departamento)	
+	// Associa√ß√£o: 1:1 (1 funcionario tem 1 departamento)
 	private Departamento departamento;
-	
-	//AssociaÁ„o: 1:n (1 funcionario tem varios contratos)
-	//Quando a composiÁ„o for de 1 pra muitos, deve ser criada da maneira abaixo, sendo que a lista a seguir n„o deve ser inserida no construtor
+
+	// Associa√ß√£o: 1:n (1 funcionario tem varios contratos)
+	// Quando a composi√ß√£o for de 1 pra muitos, deve ser criada da maneira abaixo,
+	// sendo que a lista a seguir n√£o deve ser inserida no construtor
 	private List<HorasContrato> contratos = new ArrayList<>();
-	
+
 	public Funcionario() {
-		
+
 	}
 
-	//O construtor foi gerado sem a lista
+	// O construtor foi gerado sem a lista
 	public Funcionario(String name, NivelFuncionario nivelFuncionario, Double baseSalarial, Departamento departamento) {
 		this.name = name;
 		this.nivelFuncionario = nivelFuncionario;
@@ -67,40 +68,45 @@ public class Funcionario {
 		return contratos;
 	}
 
-	//Esse metodo n„o pode ser permitido, pois ele esta recebendo no parametro uma nova lista e setando na lista de contratos
-	/*public void setContratos(List<HorasContrato> contratos) {
-		this.contratos = contratos;
-	}*/
-	
-	//adicionando um contrato na lista
+	// Esse m√©todo n√£o pode ser permitido, pois ele esta recebendo no parametro uma
+	// nova lista e setando na lista de contratos
+	/*
+	 * public void setContratos(List<HorasContrato> contratos) {
+	 * this.contratos = contratos;
+	 * }
+	 */
+
+	// adicionando um contrato na lista
 	public void addContrato(HorasContrato contrato) {
 		contratos.add(contrato);
 	}
-	
-	//removendo um contrato na lista
+
+	// removendo um contrato na lista
 	public void removerContrato(HorasContrato contrato) {
 		contratos.remove(contrato);
 	}
-	
-	//Somando o sal·rio base mais o salario dos contratos do mÍs do funcion·rio
+
+	// Somando o sal√°rio base mais o salario dos contratos do m√™s do funcion√°rio
 	public Double rendaTotal(int ano, int mes) {
-		
+
 		double soma = this.baseSalarial;
-		
+
 		Calendar calendario = Calendar.getInstance();
-		
-		//Percorrendo quais os contratos s„o do mÍs e do ano
-		//O laÁo funciona da seguinte forma: Para cada contrato c (nome da variavel) na lista de contratos, testa o mes e o ano do contrato para que o valor do mesmo seja acrescentado
-		for (HorasContrato c : contratos) {	
+
+		// Percorrendo quais os contratos s√£o do m√™s e do ano
+		// O la√ßo funciona da seguinte forma: Para cada contrato c (nome da variavel) na
+		// lista de contratos, testa o mes e o ano do contrato para que o valor do mesmo
+		// seja acrescentado
+		for (HorasContrato c : contratos) {
 			calendario.setTime(c.getDate());
 			int c_ano = calendario.get(Calendar.YEAR);
 			int c_mes = 1 + calendario.get(Calendar.MONTH);
 			if (ano == c_ano && mes == c_mes) {
-				soma = soma+c.valorTotal();
-			}	
+				soma = soma + c.valorTotal();
+			}
 		}
-		
-		return soma; 
+
+		return soma;
 	}
-	
+
 }

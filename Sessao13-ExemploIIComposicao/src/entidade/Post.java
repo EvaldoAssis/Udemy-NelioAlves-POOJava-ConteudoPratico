@@ -6,14 +6,14 @@ import java.util.Date;
 import java.util.List;
 
 public class Post {
-	
+
 	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
 	private Date moment;
 	private String title;
 	private String content;
 	private Integer likes;
-	
+
 	private List<Comment> comments = new ArrayList<>();
 
 	public Post() {
@@ -62,15 +62,17 @@ public class Post {
 		return comments;
 	}
 
-	//Não pode ter esse metodo conforme foi explicado no exemplo anterior
-	/*public void setComments(List<Comment> comments) {
-		this.comments = comments;
-	}*/
-	
+	// Nï¿½o pode ter esse metodo conforme foi explicado no exemplo anterior
+	/*
+	 * public void setComments(List<Comment> comments) {
+	 * this.comments = comments;
+	 * }
+	 */
+
 	public void addComment(Comment comment) {
 		comments.add(comment);
 	}
-	
+
 	public void removeComment(Comment comment) {
 		comments.remove(comment);
 	}
@@ -83,11 +85,12 @@ public class Post {
 		sb.append(sdf.format(moment) + "\n");
 		sb.append(content + "\n");
 		sb.append("Comments: \n");
-		//Para cada comment (nome da classe/tipo) c (nome do apelido) da lista de comentários (comments) acrescente o comentário na apresentação
+		// Para cada comment (nome da classe/tipo) c (nome do apelido) da lista de
+		// comentï¿½rios (comments) acrescente o comentï¿½rio na apresentaï¿½ï¿½o
 		for (Comment c : comments) {
 			sb.append(c.getTextComment() + "\n");
 		}
 		return sb.toString();
 	}
-	
+
 }

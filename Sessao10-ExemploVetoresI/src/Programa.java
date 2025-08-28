@@ -20,9 +20,9 @@ public class Programa {
 			vect[i] = sc.nextDouble();
 		}
 
-//		for (int i = 0; i < vect.length; i++) {
-//			sum += vect[i];	
-//		}
+		// for (int i = 0; i < vect.length; i++) {
+		// sum += vect[i];
+		// }
 
 		// Exemplo usando FOR EACH
 		for (double mediaAltura : vect) {

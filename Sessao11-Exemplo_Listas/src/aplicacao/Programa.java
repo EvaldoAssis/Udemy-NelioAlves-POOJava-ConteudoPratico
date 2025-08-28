@@ -7,58 +7,59 @@ import java.util.stream.Collectors;
 public class Programa {
 
 	public static void main(String[] args) {
-		
-		//DeclaraÁ„o de uma lista:
-		//InstanciaÁ„o de uma lista
-			List<String> list = new ArrayList<>();
-			
-		//Adicionando Elementos a lista
-			list.add("Maria");
-			list.add("Alex");
-			list.add("Bob");
-			list.add("Anna");
-		//Inserindo elemento na posiÁ„o que deseja
-			list.add(2, "Joaquim");	
-		//Tamanho da lista
-			System.out.println(list.size());
-			System.out.println("------------------");
-						
-			for (String x : list) {
-				System.out.println(x);
-			}
-			
-			System.out.println("------------------");
-		//Remover elemento da lista pelo "nome"
-			list.remove("Anna");
-		//Remover elemento da lista pela posiÁ„o
-			list.remove(1);
-		//Removendo todo que comeÁam com "tal" letra, remover por predicado
-			
-			list.removeIf(x -> x.charAt(0) == 'M');
-			
-			for (String x : list) {
-				System.out.println(x);
-			}
-			
-			System.out.println("------------------");
-		//Encontrar a posiÁ„o de um elemento
-			System.out.println("Index of Bob: " + list.indexOf("Bob"));
-		//Caso seja procurado uma pessoa ou ago que n„o esteja na lista, retornar· -1
-			System.out.println("Index of Bob: " + list.indexOf("Marco"));
-		
-			System.out.println("------------------");
-		//Filtrar a lista com todos que comecem com alguma letra, no exemplo acima a letra È o J
-			List<String> resultado = list.stream().filter(x -> x.charAt(0) == 'J').collect(Collectors.toList());
-			
-			for (String x : resultado) {
-				System.out.println(resultado);
-			}
-			
-			System.out.println("------------------");
-		//Encontrar o primeiro elemento que comece com alguma letra (O PRIMEIRO ELEMENTO QUE ATENDA O PREDICA)
-			String nome = list.stream().filter(x -> x.charAt(0) == 'B').findFirst().orElse(null);
-			System.out.println(nome);
 
+		// Declara√ß√£o de uma lista:
+		// Instancia√ß√£o de uma lista
+		List<String> list = new ArrayList<>();
+
+		// Adicionando Elementos a lista
+		list.add("Maria");
+		list.add("Alex");
+		list.add("Bob");
+		list.add("Anna");
+		// Inserindo elemento na posi√ß√£o que deseja
+		list.add(2, "Joaquim");
+		// Tamanho da lista
+		System.out.println(list.size());
+		System.out.println("------------------");
+
+		for (String x : list) {
+			System.out.println(x);
+		}
+
+		System.out.println("------------------");
+		// Remover elemento da lista pelo "nome"
+		list.remove("Anna");
+		// Remover elemento da lista pela posi√ß√£o
+		list.remove(1);
+		// Removendo todo que come√ßam com "tal" letra, remover por predicado
+
+		list.removeIf(x -> x.charAt(0) == 'M');
+
+		for (String x : list) {
+			System.out.println(x);
+		}
+
+		System.out.println("------------------");
+		// Encontrar a posi√ß√£o de um elemento
+		System.out.println("Index of Bob: " + list.indexOf("Bob"));
+		// Caso seja procurado uma pessoa ou ago que n√£o esteja na lista, retornar√° -1
+		System.out.println("Index of Bob: " + list.indexOf("Marco"));
+
+		System.out.println("------------------");
+		// Filtrar a lista com todos que comecem com alguma letra, no exemplo acima a
+		// letra √© o J
+		List<String> resultado = list.stream().filter(x -> x.charAt(0) == 'J').collect(Collectors.toList());
+
+		for (String x : resultado) {
+			System.out.println(resultado);
+		}
+
+		System.out.println("------------------");
+		// Encontrar o primeiro elemento que comece com alguma letra (O PRIMEIRO
+		// ELEMENTO QUE ATENDA O PREDICADO)
+		String nome = list.stream().filter(x -> x.charAt(0) == 'B').findFirst().orElse(null);
+		System.out.println(nome);
 
 	}
 

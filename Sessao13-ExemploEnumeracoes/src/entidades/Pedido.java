@@ -5,14 +5,14 @@ import java.util.Date;
 import entidade.enums.OrderStatus;
 
 public class Pedido {
-	
+
 	private Integer id;
 	private Date moment;
 	private OrderStatus status;
-	
+
 	public Pedido() {
 	}
-	
+
 	public Pedido(Integer id, Date moment, OrderStatus status) {
 		this.id = id;
 		this.moment = moment;
@@ -47,7 +47,5 @@ public class Pedido {
 	public String toString() {
 		return "Pedido id=" + id + ", moment=" + moment + ", status=" + status;
 	}
-	
-	
-	
+
 }

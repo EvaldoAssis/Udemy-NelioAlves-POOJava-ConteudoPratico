@@ -3,15 +3,15 @@ package entidade;
 import java.util.Date;
 
 public class HorasContrato {
-	
+
 	private Date date;
 	private Double valorPorHora;
 	private Integer qntHoras;
-	
+
 	public HorasContrato() {
-		
+
 	}
-	
+
 	public HorasContrato(Date date, Double valorPorHora, Integer qntHoras) {
 		this.date = date;
 		this.valorPorHora = valorPorHora;
@@ -40,8 +40,8 @@ public class HorasContrato {
 
 	public void setQntHoras(Integer qntHoras) {
 		this.qntHoras = qntHoras;
-	}	
-	
+	}
+
 	public double valorTotal() {
 		return valorPorHora * qntHoras;
 	}

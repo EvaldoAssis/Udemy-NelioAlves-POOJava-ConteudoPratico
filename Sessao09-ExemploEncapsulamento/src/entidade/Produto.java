@@ -1,19 +1,22 @@
 package entidade;
 
 public class Produto {
-	
-	/*Encapsular È proteger os dados, ou seja, usar o modificador de acesso private 
-	ao invÈs de usar public. Isso far· com que esses atributos n„o possam ser acessados por outra classe,
-	desde que n„o usem os metÛdos geters e seter*/
-	
+
+	/*
+	 * Encapsular √© proteger os dados, ou seja, usar o modificador de acesso private
+	 * ao inv√©s de usar public. Isso far√° com que esses atributos n√£o possam ser
+	 * acessados por outra classe,
+	 * desde que n√£o usem os met√≥dos geters e seter
+	 */
+
 	private String nome;
 	private double preco;
 	private int quantidade;
-	
-	public Produto(){
-		
+
+	public Produto() {
+
 	}
-	
+
 	public Produto(String nome, double preco, int quantidade) {
 		super();
 		this.nome = nome;
@@ -47,19 +50,20 @@ public class Produto {
 	}
 
 	public double TotalValorNoEstoque() {
-		return preco*quantidade;
+		return preco * quantidade;
 	}
-	
+
 	public void AdicionarProduto(int quantidade) {
 		this.quantidade += quantidade;
 	}
-	
+
 	public void RemoverProduto(int quantidade) {
 		this.quantidade -= quantidade;
 	}
-	
+
 	public String toString() {
-		return nome + ", $ " + String.format("%.2f", preco) + ", " + quantidade + "  unidades, Total: $ " + String.format("%.2f",TotalValorNoEstoque()); 
+		return nome + ", $ " + String.format("%.2f", preco) + ", " + quantidade + "  unidades, Total: $ "
+				+ String.format("%.2f", TotalValorNoEstoque());
 	}
 
 }

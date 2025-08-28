@@ -8,46 +8,49 @@ import entidade.Produto;
 public class Programa {
 
 	public static void main(String[] args) {
-		
+
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		
-		/*Essa instanciaÁ„o È de acordo com o construtor padr„o, que n„o recebe nenhum par‚metro*/
-//		Produto p = new Produto();
-		
+
+		/*
+		 * Essa instancia√ß√£o √© de acordo com o construtor padr√£o, que n√£o recebe nenhum
+		 * par√¢metro
+		 */
+		// Produto p = new Produto();
+
 		System.out.println("Insira os dados do produto: ");
-		
+
 		System.out.print("Nome: ");
 		String nome = sc.next();
-		System.out.print("PreÁo: ");
+		System.out.print("Pre√ßo: ");
 		double preco = sc.nextDouble();
 
-		/*Essa instanciaÁ„o È de acordo com o construtor que recebe 2 par‚metros*/
+		/* Essa instancia√ß√£o √© de acordo com o construtor que recebe 2 par√¢metros */
 		Produto produto = new Produto(nome, preco);
-		
+
 		produto.setNome("Computador");
 		System.out.println("Nome do produto editado com sucesso!!! " + produto.getNome());
-		
+
 		produto.setPreco(1200.00);
-		System.out.println("PreÁo do produto editado com sucesso!!! " + produto.getPreco());
-		
+		System.out.println("Pre√ßo do produto editado com sucesso!!! " + produto.getPreco());
+
 		System.out.println();
 		System.out.println("Dados do produto: " + produto.toString());
-		
-		System.out.print("Entre com o n˙mero de produtos para adicion·-los ao estoque: ");
+
+		System.out.print("Entre com o n√∫mero de produtos para adiciona-los ao estoque: ");
 		int quantidade = sc.nextInt();
 		produto.AdicionarProduto(quantidade);
-		
+
 		System.out.println();
 		System.out.println("Dados do produto: " + produto.toString());
-		
-		System.out.print("Entre com o n˙mero de produtos para remove-los do estoque: ");
+
+		System.out.print("Entre com o n√∫mero de produtos para remove-los do estoque: ");
 		quantidade = sc.nextInt();
 		produto.RemoverProduto(quantidade);
-		
+
 		System.out.println();
 		System.out.println("Dados do produto: " + produto.toString());
-		
+
 	}
 
 }
