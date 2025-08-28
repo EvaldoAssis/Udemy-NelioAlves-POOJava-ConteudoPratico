@@ -1,0 +1,20 @@
+# Ignorar builds e compilados
+bin/
+*.class
+
+# Ignorar configurações locais do Eclipse
+.settings/
+.metadata/
+
+# Opcional: ignorar se não quiser compartilhar classpath/project
+# .classpath
+# .project
+
+# Outros temporários
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.DS_Store  # Para Mac
+Thumbs.db  # Para Windows
